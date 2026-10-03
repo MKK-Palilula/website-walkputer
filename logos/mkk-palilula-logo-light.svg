@@ -1,0 +1,11 @@
+<!-- MKK Palilula horizontal badge — LIGHT variant (for dark backgrounds).
+     Inverted: light-grey body with dark IC epoxy-grey text. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 40" role="img" aria-label="MKK Palilula">
+  <rect x="0" y="0" width="240" height="40" rx="6" fill="#cdd1d6" />
+  <text x="120" y="21"
+        text-anchor="middle" dominant-baseline="central"
+        font-family="system-ui, -apple-system, 'Segoe UI', sans-serif"
+        font-size="15" font-weight="600"
+        letter-spacing="3"
+        fill="#2b2c30">MKK PALILULA</text>
+</svg>

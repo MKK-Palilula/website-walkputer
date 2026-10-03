@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Walkputer — Coming soon</title>
+    <meta name="description" content="Walkputer, a pocket micro-computer by MKK Palilula. Coming soon." />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2b2c30" />
+    <!-- Relative paths, so the page also works from the github.io project URL. -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <style>
+      /* Light: the main site's greys (Tailwind gray). Dark: the logo's own
+         colours — IC epoxy body, silkscreen-grey text. */
+      :root {
+        --bg: #ffffff;
+        --text: #374151;
+        --muted: #6b7280;
+        --line: #e5e7eb;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #2b2c30;
+          --text: #cdd1d6;
+          --muted: #8e939a;
+          --line: #46484e;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg);
+        color: var(--text);
+        font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 1.5rem;
+        text-align: center;
+      }
+
+      .logo {
+        display: block;
+        border-radius: 6px;
+      }
+      .logo:focus-visible {
+        outline: 2px solid var(--text);
+        outline-offset: 4px;
+      }
+      .logo picture,
+      .logo img {
+        display: block;
+      }
+      .logo img {
+        width: 240px;
+        max-width: 100%;
+        height: auto;
+      }
+
+      h1 {
+        margin: 3.5rem 0 0;
+        font-size: clamp(2.75rem, 11vw, 4.5rem);
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: -0.025em;
+      }
+
+      .tagline {
+        margin: 1rem 0 0;
+        font-size: 1.125rem;
+        color: var(--muted);
+      }
+
+      /* Same label style as the main site's section headings. The right
+         padding is shortened by the tracking that trails the last letter. */
+      .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.625rem;
+        margin: 2.5rem 0 0;
+        padding: 0.5rem calc(1rem - 0.2em) 0.5rem 1rem;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .status::before {
+        content: '';
+        width: 0.375rem;
+        height: 0.375rem;
+        border-radius: 50%;
+        background: currentColor;
+        animation: pulse 2s ease-in-out infinite;
+      }
+      @keyframes pulse {
+        50% {
+          opacity: 0.25;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .status::before {
+          animation: none;
+        }
+      }
+
+      footer {
+        padding: 1.5rem;
+        text-align: center;
+        font-size: 0.875rem;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a class="logo" href="https://mkk-palilula.com/">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="logos/mkk-palilula-logo-light.svg" />
+          <img src="logos/mkk-palilula-logo-dark.svg" width="240" height="40" alt="MKK Palilula" />
+        </picture>
+      </a>
+      <h1>Walkputer</h1>
+      <p class="tagline">A pocket micro-computer</p>
+      <p class="status">Coming soon</p>
+    </main>
+    <footer>© 2026 MKK Palilula. All rights reserved.</footer>
+  </body>
+</html>
